@@ -1,7 +1,0 @@
-extends layout
-
-block content
-    h1= title
-    form#formAddUser(name="mail",method="post",action="/sendmail")
-        input#inputUserName(type="text", placeholder="username", name="username")
-        button#btnSubmit(type="submit") Send Mail
