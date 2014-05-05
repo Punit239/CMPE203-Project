@@ -1,0 +1,23 @@
+#imagesList {
+    margin: 0 auto;
+    list-style:none;
+    border: 1px solid #000000;
+    width:150px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding:20px;
+}
+
+.fruit{
+    cursor:pointer;
+    border:1px solid #dddddd;
+    background:#eeeeee;
+    margin:5px;
+    padding:5px;
+}
+
+button{
+    background:#eeeeee;
+    cursor:pointer;
+}
