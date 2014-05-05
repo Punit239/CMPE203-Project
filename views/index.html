@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 
+<html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- MODULE NAME : INDEX.HTML -->
+<!-- AUTHORS : Ankur Gupta, Deven Pawar, Vinay Bhore -->
+<!-- FUNCTION : Displays Board Categories and Navigates user to the board based on selected category. -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>PinBoard Homepage</title>
+<title><color = black> PinBoard Board Gallery</title>
+  <!-- Contains all the required javascript and css imports -->
+  
+  <link rel="stylesheet" href="css/foundation.css">
+    <script src="js/vendor/custom.modernizr.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.lightbox-0.5.min.js"></script>
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/btn.css">
+  <script type="text/javascript">
+  <!-- variable that contains specific board category selected by user -->
+          var category = "";
+          </script>
+
+	
+	
+	<!-- -->
+	
+</head>
+<body>
+	    <div class="sticky">
+                <nav class="top-bar">
+                        <ul class="title-area">
+                                <li class="name">
+                                        <a style="color:#0d95ca" href="#">PinBoard</a>
+                               <!--&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a style="color:#0d95ca" href="file:///C:/Program%20Files/nodejs/nodeOAuth/New%20folder/index.html">Home</a>-->
+							   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a style="color:#0d95ca" href="../userHome">Home</a>
+                               &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a style="color:#0d95ca" href="../aboutus">About Us</a>
+							   
+								</li>
+                        </ul>
+                        <section class="top-bar-section">
+                                <ul class="right">
+                                        <li>
+                                          <!-- Sign Out Link -->
+										  <a style="color:#0d95ca" href="../">Sign Out</a>
+                                     	
+										</li>
+                                </ul>
+						</section>
+				</nav>
+			</div>
+	<!-- recent changes -->
+	
+	<div id="wrapper">
+    <div id="content">
+      <h1><center>Profile</center></h1>
+      
+	  <!-- List of Board Categories available -->
+      <div class="photos">
+        <ul id='category' class="clearfix">
+          <li id='entertainment' name='images/photos/Entertainment150x150.jpg'> <a href="new" ><img src="images/photos/Entertainment150x150.jpg" width="200" height="200"></a> </li>
+          
+          <li id='food' name='images/photos/foodstuff150x150.jpg'> <a href="new" ><img src="images/photos/foodstuff150x150.jpg" width="200" height="200"></a> </li>
+          
+          <li id='business' name='images/photos/groups150x150.png'> <a href="new" ><img src="images/photos/groups150x150.png" width="200" height="200"></a> </li>
+          
+          <li id='holidays' name='images/photos/holiday150x150.jpg'> <a href="new" ><img src="images/photos/holiday150x150.jpg" width="200" height="200"></a> </li>
+          
+
+          <li id='sports' name='images/photos/sports.jpg'> <a href="new" ><img src="images/photos/sports.jpg" width="200" height="200"></a> </li>
+          
+          
+          <li id='education' name='images/photos/education.jpg'> <a href="new"><img src="images/photos/education.jpg" width="200" height="200"></a> </li>
+
+          <li id='health' name='images/photos/health.jpg'> <a href="new"><img src="images/photos/health.jpg" width="200" height="200"></a> </li>
+
+          <li id='travel' name='images/photos/travel150x150.jpg'> <a href="new"><img src="images/photos/travel150x150.jpg" width="200" height="200"></a> </li>
+
+          <li id='nature' name='images/photos/nature.jpg'> <a href="new"><img src="images/photos/nature.jpg" width="200" height="200"></a> </li>
+
+		  </ul>
+    
+
+	</div>
+
+	<!-- Refer to Friend Implementation -->
+    <b><p>Refer to a friend!!</p></b>
+			<form id="signupForm" action="/inviteFriend" method="POST">
+			&nbsp; &nbsp; &nbsp;<input type="email" name="email" placeholder="Email Id" style="width:100px;" />
+						<p><button class="small button" input type = "submit"><b>Submit</b></button></	p>
+			</form>
+
+    </div> <!-- /end #content -->
+        
+  </div>
+	
+	
+	
+	
+	
+	
+	
+	<!-- end of recent changes -->
+	
+	
+	 <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <b><h2>Want to find more Pins?</h2></b>
+                    <p><b>
+Discover Pins by category, or search for the exact thing you're looking for.</b></p>
+                    <a href="#" class="btn btn-default btn-lg"><b>Like us on Social Media</b></a>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+     <script type="text/javascript">
+         
+         $("#category li").click(function() {
+                                 category =  $(this).attr('id');
+                                 localStorage.category = category;
+                                 var src = $(this).attr('name');
+                                 localStorage.imagepath = src;
+                                 });
+                                 
+        </script>
+     
+	</body>
+
+
+</html>
