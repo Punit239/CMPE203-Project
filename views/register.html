@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if IE 8]>                  <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<!-- MODULE NAME : REGISTER.HTML -->
+<!-- AUTHORS : Ankur Gupta, Ayush Mittal Deven Pawar, Vinay Bhore -->
+<!-- FUNCTION : Register New User -->
+
+<head>
+  <meta name="viewport" content="width=device-width">
+  <title>Profile Creation</title>
+
+  
+  <link rel="stylesheet" href="css/foundation.css">
+  
+
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <!-- Variable contains username -->
+  var username = "";
+  <script type="text/javascript">
+  
+  </script>
+
+</head>
+<body>
+<div class="sticky">
+                <nav class="top-bar">
+                        <ul class="title-area">
+                                <li class="name">
+                                        <h1><a style="color:#0d95ca" href="#">PinBoard</a></h1>
+                                </li>
+                        </ul>
+
+                        <section class="top-bar-section">
+                                <ul class="right">
+                                        <li>
+                                                <a style="color:#0d95ca" href="#" data-reveal-id="event" onclick=createevent()></a>
+                                        </li>
+                                         <li>
+                                                <a style="color:#0d95ca" href="#" data-reveal-id="login" onclick=login()>Log In</a>
+                                        </li>
+                                </ul>
+                        </section>
+                </nav>
+            </div>
+
+    <div class="row">
+        <div class="large-12 columns">
+            <h2>Create Profile</h2>
+            <hr />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-8 columns">
+            <p>Enter your details to complete profile creation</p>
+
+            <!--User Registration Form -->
+            <div class="row">
+                <div class="large-12 columns">
+                    <div id= "User registration form" class="panel">
+                        <form id="signupForm" action="/saveDetails" method="POST">
+                        User Id: <input type="text" name="userid"><br>
+                        Phone Number: <input type="text" id="phoneNumber" name="phoneNumber" onkeyup="saveUserName();" name="phoneNumber" /><br> 
+                        Gender: <input type="radio" name="sex" value="male"> Male <input type="radio" name="sex" value="female"> Female <br>
+                        
+						<input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    function saveUserName() {
+        username = document.getElementById("phoneNumber").value;
+		localStorage.userName = username;
+	
+    }
+
+</script>
+
+  
+</body>
+</html>
+
